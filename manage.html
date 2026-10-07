@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Manage Quizzes</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+  <nav class="top-nav">
+
+    <a
+      class="brand"
+      href="index.html"
+    >
+      My Quiz
+    </a>
+
+
+    <div class="nav-links">
+
+      <a href="index.html">
+        Take Quiz
+      </a>
+
+
+      <a
+        class="active"
+        href="manage.html"
+      >
+        Manage Quizzes
+      </a>
+
+
+      <a href="race.html">
+        🦆 Duck Race
+      </a>
+
+    </div>
+
+
+    <!-- BACKGROUND BUTTON -->
+
+    <div class="theme-picker">
+
+      <button
+        id="themeButton"
+        class="theme-button"
+        type="button"
+      >
+        🎨 Background
+      </button>
+
+
+      <div
+        id="themeMenu"
+        class="theme-menu"
+        hidden
+      ></div>
+
+    </div>
+
+  </nav>
+
+
+
+  <main class="page-container">
+
+
+    <!-- HEADER -->
+
+    <section class="hero-card">
+
+      <p class="eyebrow">
+        Quiz Builder
+      </p>
+
+
+      <h1>
+        Manage Your Questionnaires
+      </h1>
+
+
+      <p class="subtitle">
+
+        Click the + button to create
+        a quiz without editing code.
+
+      </p>
+
+    </section>
+
+
+
+    <!-- QUIZ LIST -->
+
+    <section class="builder-card">
+
+      <div class="builder-top">
+
+        <div>
+
+          <h2>
+            Your Quizzes
+          </h2>
+
+
+          <p class="muted">
+
+            Create, edit, or delete
+            questionnaires.
+
+          </p>
+
+        </div>
+
+
+        <button
+          id="newQuizBtn"
+          class="plus-btn"
+          type="button"
+          title="Add new quiz"
+        >
+          +
+        </button>
+
+      </div>
+
+
+      <div
+        id="quizList"
+        class="quiz-list"
+      ></div>
+
+    </section>
+
+
+
+    <!-- QUIZ EDITOR -->
+
+    <section
+      id="editor"
+      class="builder-card"
+      hidden
+    >
+
+      <div class="editor-header">
+
+        <div>
+
+          <p
+            id="editorMode"
+            class="eyebrow"
+          >
+            New Quiz
+          </p>
+
+
+          <h2 id="editorTitle">
+            Create Questionnaire
+          </h2>
+
+        </div>
+
+
+        <button
+          id="cancelBtn"
+          class="small-btn"
+          type="button"
+        >
+          Cancel
+        </button>
+
+      </div>
+
+
+
+      <!-- QUIZ DETAILS -->
+
+      <div class="form-grid">
+
+        <label>
+
+          Quiz title
+
+          <input
+            id="quizNameInput"
+            type="text"
+            placeholder="Example: Environmental Science"
+          >
+
+        </label>
+
+
+        <label>
+
+          Description
+
+          <input
+            id="quizDescriptionInput"
+            type="text"
+            placeholder="Example: Phosphorus Cycle Review"
+          >
+
+        </label>
+
+      </div>
+
+
+
+      <!-- QUESTIONS -->
+
+      <div class="section-heading">
+
+        <div>
+
+          <h3>
+            Questions
+          </h3>
+
+
+          <p class="muted">
+
+            Add questions and choose
+            the correct answers.
+
+          </p>
+
+        </div>
+
+
+        <button
+          id="addQuestionBtn"
+          class="add-question-btn"
+          type="button"
+        >
+          + Add Question
+        </button>
+
+      </div>
+
+
+
+      <div
+        id="questionEditorList"
+      ></div>
+
+
+
+      <!-- SAVE -->
+
+      <div class="save-bar">
+
+        <button
+          id="saveQuizBtn"
+          class="primary-btn"
+          type="button"
+        >
+          Save Quiz
+        </button>
+
+      </div>
+
+
+      <p
+        id="formMessage"
+        class="form-message"
+        hidden
+      ></p>
+
+    </section>
+
+
+
+    <!-- INFO -->
+
+    <section class="info-card">
+
+      <h2>
+        How saving works
+      </h2>
+
+
+      <p>
+
+        Quizzes are saved in this browser
+        using localStorage.
+
+      </p>
+
+
+      <p>
+
+        You can add questions here without
+        touching the JavaScript code.
+
+      </p>
+
+
+      <p>
+
+        This version does not use a shared
+        online database, so quizzes and
+        leaderboard results are stored
+        on the current browser/device.
+
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <script src="theme.js"></script>
+  <script src="manage.js"></script>
+
+</body>
+
+</html>

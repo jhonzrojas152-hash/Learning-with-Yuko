@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Duck Race</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+  <nav class="top-nav">
+
+    <a
+      class="brand"
+      href="index.html"
+    >
+      My Quiz
+    </a>
+
+
+    <div class="nav-links">
+
+      <a href="index.html">
+        Take Quiz
+      </a>
+
+
+      <a href="manage.html">
+        Manage Quizzes
+      </a>
+
+
+      <a
+        class="active"
+        href="race.html"
+      >
+        🦆 Duck Race
+      </a>
+
+    </div>
+
+
+    <!-- BACKGROUND BUTTON -->
+
+    <div class="theme-picker">
+
+      <button
+        id="themeButton"
+        class="theme-button"
+        type="button"
+      >
+        🎨 Background
+      </button>
+
+
+      <div
+        id="themeMenu"
+        class="theme-menu"
+        hidden
+      ></div>
+
+    </div>
+
+  </nav>
+
+
+
+  <main class="page-container">
+
+
+    <!-- HEADER -->
+
+    <section class="hero-card">
+
+      <p class="eyebrow">
+        Mini Game
+      </p>
+
+
+      <h1>
+        🦆 Duck Race
+      </h1>
+
+
+      <p class="subtitle">
+
+        Choose your duck and race
+        against three computer ducks.
+
+      </p>
+
+    </section>
+
+
+
+    <!-- PLAYER SETTINGS -->
+
+    <section class="builder-card">
+
+      <h2>
+        Player
+      </h2>
+
+
+      <label>
+
+        Username
+
+        <input
+          id="raceUsername"
+          type="text"
+          maxlength="24"
+          placeholder="Enter your username"
+        >
+
+      </label>
+
+
+
+      <!-- QUIZ INFORMATION -->
+
+      <div class="race-info-grid">
+
+        <div class="stat-card">
+
+          <span>
+            Last Quiz Score
+          </span>
+
+
+          <strong id="raceQuizScore">
+            No quiz yet
+          </strong>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <span>
+            Race Boost
+          </span>
+
+
+          <strong id="raceBoost">
+            0%
+          </strong>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- DUCK CHOICE -->
+
+      <div class="section-heading">
+
+        <div>
+
+          <h2>
+            Choose Your Duck
+          </h2>
+
+
+          <p class="muted">
+
+            Your quiz score gives your
+            duck a small speed advantage.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        id="duckChoices"
+        class="duck-choices"
+      ></div>
+
+
+
+      <!-- BUTTONS -->
+
+      <div class="race-actions">
+
+        <button
+          id="startRaceBtn"
+          class="primary-btn"
+          type="button"
+        >
+          🏁 Start Race
+        </button>
+
+
+        <button
+          id="resetRaceBtn"
+          class="small-btn"
+          type="button"
+        >
+          Reset
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- RACE TRACK -->
+
+    <section
+      id="raceTrack"
+      class="race-track builder-card"
+      hidden
+    >
+
+      <div class="race-title-row">
+
+        <div>
+
+          <h2>
+            🏁 Race in Progress
+          </h2>
+
+
+          <p
+            id="raceStatus"
+            class="muted"
+          >
+            And they're off!
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div id="lanes"></div>
+
+    </section>
+
+
+
+    <!-- RESULT -->
+
+    <section
+      id="raceResult"
+      class="result-card"
+      hidden
+    >
+
+      <h2 id="winnerTitle">
+        🏆 Race Finished!
+      </h2>
+
+
+      <p id="raceResultText"></p>
+
+
+      <div id="raceStandings"></div>
+
+
+      <a
+        class="race-btn"
+        href="index.html"
+      >
+        📝 Take Another Quiz
+      </a>
+
+    </section>
+
+
+
+    <!-- LEADERBOARD -->
+
+    <section class="builder-card">
+
+      <div class="section-heading">
+
+        <div>
+
+          <h2>
+            🏆 Local Leaderboard
+          </h2>
+
+
+          <p class="muted">
+
+            Results are saved in this browser.
+
+          </p>
+
+        </div>
+
+
+        <button
+          id="clearLeaderboardBtn"
+          class="delete-btn"
+          type="button"
+        >
+          Clear
+        </button>
+
+      </div>
+
+
+      <div id="leaderboard"></div>
+
+    </section>
+
+  </main>
+
+
+  <script src="theme.js"></script>
+  <script src="race.js"></script>
+
+</body>
+
+</html>

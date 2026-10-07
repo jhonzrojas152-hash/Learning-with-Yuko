@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>My Quiz</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+
+<body>
+
+  <nav class="top-nav">
+
+    <a
+      class="brand"
+      href="index.html"
+    >
+      My Quiz
+    </a>
+
+
+    <div class="nav-links">
+
+      <a
+        class="active"
+        href="index.html"
+      >
+        Take Quiz
+      </a>
+
+
+      <a href="manage.html">
+        Manage Quizzes
+      </a>
+
+
+      <a href="race.html">
+        🦆 Duck Race
+      </a>
+
+    </div>
+
+
+    <!-- BACKGROUND BUTTON -->
+
+    <div class="theme-picker">
+
+      <button
+        id="themeButton"
+        class="theme-button"
+        type="button"
+      >
+        🎨 Background
+      </button>
+
+
+      <div
+        id="themeMenu"
+        class="theme-menu"
+        hidden
+      ></div>
+
+    </div>
+
+  </nav>
+
+
+  <main class="page-container">
+
+
+    <!-- HEADER -->
+
+    <section class="hero-card">
+
+      <p class="eyebrow">
+        Interactive Quiz
+      </p>
+
+
+      <h1 id="pageTitle">
+        Choose a Quiz
+      </h1>
+
+
+      <p class="subtitle">
+
+        Enter your username,
+        choose a questionnaire,
+        and take the quiz.
+
+      </p>
+
+    </section>
+
+
+
+    <!-- USERNAME -->
+
+    <section
+      id="startPanel"
+      class="builder-card"
+    >
+
+      <h2>
+        Player Information
+      </h2>
+
+
+      <label>
+
+        Username
+
+        <input
+          id="usernameInput"
+          type="text"
+          maxlength="24"
+          placeholder="Enter your username"
+        >
+
+      </label>
+
+
+      <p
+        id="startMessage"
+        class="form-message"
+        hidden
+      ></p>
+
+    </section>
+
+
+
+    <!-- QUIZ LIST -->
+
+    <section
+      id="quizPicker"
+      class="quiz-picker"
+    ></section>
+
+
+
+    <!-- ACTUAL QUIZ -->
+
+    <section
+      id="quizArea"
+      hidden
+    >
+
+      <button
+        id="backToQuizzesBtn"
+        class="small-btn"
+        type="button"
+      >
+        ← Back to Quizzes
+      </button>
+
+
+      <div class="quiz-title-row">
+
+        <h2
+          id="quizTitle"
+          class="quiz-heading"
+        ></h2>
+
+
+        <p
+          id="quizDescription"
+          class="subtitle"
+        ></p>
+
+
+        <p
+          id="playerWelcome"
+          class="player-welcome"
+        ></p>
+
+      </div>
+
+
+      <section id="quiz"></section>
+
+
+      <!-- BUTTONS -->
+
+      <div class="quiz-actions">
+
+        <button
+          id="submitBtn"
+          class="primary-btn"
+          type="button"
+          disabled
+        >
+          Finish Quiz
+        </button>
+
+
+        <button
+          id="restartBtn"
+          class="dark-btn"
+          type="button"
+          hidden
+        >
+          Try Again
+        </button>
+
+
+        <a
+          id="raceBtn"
+          class="race-btn"
+          href="race.html"
+          hidden
+        >
+          🦆 Go to Duck Race
+        </a>
+
+      </div>
+
+
+
+      <!-- SCORE -->
+
+      <section
+        id="result"
+        class="result-card"
+        hidden
+      >
+
+        <h2>
+          Quiz Completed!
+        </h2>
+
+
+        <p id="scoreText"></p>
+
+
+        <div class="score-bar">
+
+          <div
+            id="scoreFill"
+            class="score-fill"
+          ></div>
+
+        </div>
+
+
+        <p
+          id="percentageText"
+          class="percentage"
+        ></p>
+
+      </section>
+
+
+
+      <!-- ANSWER KEY -->
+
+      <section
+        id="answerKey"
+        class="answer-key"
+        hidden
+      >
+
+        <h2>
+          Answer Key
+        </h2>
+
+
+        <p class="key-note">
+
+          The answer key appears only
+          after the quiz is completed.
+
+        </p>
+
+
+        <div id="keyList"></div>
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+  <script src="theme.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
